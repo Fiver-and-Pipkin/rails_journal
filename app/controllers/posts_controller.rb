@@ -2,21 +2,18 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    render :index
   end
 
   def show
    @post = Post.find(params[:id])
-   render :show
  end
 
   def new
     @post = Post.new
-    render :new
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Post successfully added!"
       redirect_to  posts_path
@@ -27,7 +24,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    render :edit
   end
 
   def update
@@ -46,5 +42,10 @@ class PostsController < ApplicationController
     redirect_to posts_path
     flash[:notice] = "Post successfully deleted!"
   end
+
+  private
+    def post_params
+      params.require(:post).permit(:title, :entry, :date)
+    end
 
 end
