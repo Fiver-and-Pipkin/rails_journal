@@ -1,28 +1,62 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Journal
+========
 
-Things you may want to cover:
+by Debbie Cravey
 
-* Ruby version
+Rails Journal is a blog application built with Ruby on Rails version 4.2.0 and an ActiveRecord database. It allows a user to create, edit, and delete blog posts, and allows for users to make, edit, and delete comments on individual entries.
 
-* System dependencies
+Installation
+------------
 
-* Configuration
+Install Rails Journal by first cloning the repository.
 
-* Database creation
+```
+$ git clone https://github.com/dacravey/rails_journal.git
+```
 
-* Database initialization
+To create database, open terminal and run
 
-* How to run the test suite
+```
+rake db:create
+rake db:migrate
+rake db:test:prepare
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Dependencies
+------------
+Install the following gems:
+* 'rails'
+* 'pg'
+* 'bootstrap-sass', '~> 3.3.4'
+* 'sass-rails'
+* 'uglifier'
+* 'coffee-rails'
+* 'jquery-rails'
+* 'turbolinks'
+* 'web-console'
+* 'spring'
+* 'quiet_assets'
 
-* Deployment instructions
+```
+Contribute
+----------
+- Issue Tracker: github.com/dacravey/rails_journal/issues
+- Source Code: github.com/dacravey/rails_journal
 
-* ...
+Support
+-------
 
+If you are having issues, please let me know at: cinder.the.rogue@gmail.com
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Bug reports
+===========
+
+If you discover any bugs, feel free to create an issue on GitHub. Please add as much information as possible to help with fixing the possible bug. I also welcome your help if you choose to fork and send a pull request.
+
+- https://github.com/dacravey/rails_journal/issues
+
+License
+=======
+
+MIT License. Copyright 2015 Debbie Cravey
