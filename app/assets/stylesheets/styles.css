@@ -2,23 +2,32 @@
   display: inline;
   margin-right: 1em;
 }
-
-/*a:link {
-  color: white;
+.nav {
+  margin-top: 10px;
 }
-a:visited {
-  color: white;
-}
-a:hover{
-  color: yellow;
-}
-a:active {
-  color: yellow;
-}
-
 .nav-right {
   float: right;
 }
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Kameron', serif;
+}
+
+a:link {
+  color: blue;
+}
+a:visited {
+  color: blue;
+}
+a:hover{
+  color: purple;
+}
+a:active {
+  color: purple;
+}
+
+
 
 .column {
   float: right;
@@ -26,27 +35,6 @@ a:active {
   margin-right: 15px;
 }
 
-.nav {
-  margin-top: 10px;
-}
-
 .column2 {
   float: left;
-}
-#images img {
-  width: 390px;
-  height: 340px;
-}
-
-.users img {
-  width: 35px;
-  height: 35px;
-}
-#profile img {
-  width: 290px;
-  height: 240px;
-}
-.center {
-  float: center;
-  text-align: center;*/
 }
