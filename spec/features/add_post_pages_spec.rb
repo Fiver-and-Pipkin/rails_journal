@@ -24,4 +24,14 @@ describe "the add a blog post process" do
     expect(page).to have_content 'errors'
   end
 
+  it "edits a post" do
+    post = Post.create(:title => 'My First Post', :entry => 'This is my first entry')
+    visit post_path(post)
+    click_on 'Edit'
+    fill_in 'Title', :with => 'My First Post'
+    fill_in 'Entry', :with => 'Nevermind. I want ice cream'
+    click_on 'Update Post'
+    expect(page).to have_content 'successfully'
+  end
+
 end

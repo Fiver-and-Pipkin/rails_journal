@@ -1,8 +1,27 @@
-<% content_for(:title, "Post | Rails Journal") %>
+<% content_for(:title, "Post | RailsJournal") %>
 
 <h1><%= @post.title %></h1>
 
 <h4><%= @post.entry %></h4>
+
+
+<% if @post.comments.any? %>
+  <h4>Here are the comments for this post:</h4>
+
+  <ul>
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= comment.thoughts %> |
+        <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+        <%= link_to "Delete", post_comment_path(@post, comment),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no comments yet!</p>
+<% end %>
 
 
 
