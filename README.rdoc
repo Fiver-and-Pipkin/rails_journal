@@ -13,6 +13,7 @@ Install Rails Journal by first cloning the repository.
 
 ```
 $ git clone https://github.com/dacravey/rails_journal.git
+
 ```
 
 To create database, open terminal and run
@@ -21,6 +22,7 @@ To create database, open terminal and run
 rake db:create
 rake db:migrate
 rake db:test:prepare
+
 ```
 
 Dependencies
@@ -38,7 +40,6 @@ Install the following gems:
 * 'spring'
 * 'quiet_assets'
 
-```
 Contribute
 ----------
 - Issue Tracker: github.com/dacravey/rails_journal/issues
