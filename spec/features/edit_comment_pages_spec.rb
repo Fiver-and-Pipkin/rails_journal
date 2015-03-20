@@ -29,6 +29,4 @@ describe "the edit a comment process" do
     expect(page).to have_content 'errors'
   end
 
-
-
 end

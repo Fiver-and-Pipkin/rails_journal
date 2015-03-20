@@ -32,5 +32,4 @@ describe "the edit a blog post process" do
     expect(page).to have_content 'errors'
   end
 
-
 end

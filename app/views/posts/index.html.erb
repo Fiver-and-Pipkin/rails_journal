@@ -3,13 +3,11 @@
 
 <h1>What's Happening?</h1>
 
-<ul>
-  <% @posts.order('created_at DESC').each do |post| %>
-    <li><%= link_to post.title, post_path(post) %>
-       <em>updated <%= post.updated_at.strftime("%b %d %Y") %></em></li>
-
-
-  <% end %>
-</ul>
+  <ul>
+    <% @posts.order('created_at DESC').each do |post| %>
+      <li><%= link_to post.title, post_path(post) %>
+         <em>updated <%= post.updated_at.strftime("%b %d %Y") %></em></li>
+    <% end %>
+  </ul>
 
 <p><%= link_to "Add a new post", new_post_path %></p>
