@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
+gem 'bootstrap-sass', '~> 3.3.4'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -23,4 +24,5 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'launchy'
 end

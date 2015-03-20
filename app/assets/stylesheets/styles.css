@@ -1,0 +1,52 @@
+.main-nav li {
+  display: inline;
+  margin-right: 1em;
+}
+
+/*a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover{
+  color: yellow;
+}
+a:active {
+  color: yellow;
+}
+
+.nav-right {
+  float: right;
+}
+
+.column {
+  float: right;
+  padding: 5px 10px;
+  margin-right: 15px;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.column2 {
+  float: left;
+}
+#images img {
+  width: 390px;
+  height: 340px;
+}
+
+.users img {
+  width: 35px;
+  height: 35px;
+}
+#profile img {
+  width: 290px;
+  height: 240px;
+}
+.center {
+  float: center;
+  text-align: center;*/
+}

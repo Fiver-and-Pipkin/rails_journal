@@ -8,12 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+      <div class="container">
+      <div class="nav">
+        <nav class="main-nav">
+          <ul class="list-unstyled">
+              <li><button class="btn btn-primary btn-xs"><%= link_to 'Home', "/" %></button></li>
+              <li><button class="btn btn-danger btn-xs"><%= link_to 'Posts', posts_path %></button></li>
+              <span class="center">
+                <strong></strong>
+              </span>
+              <div class="nav-right">
+               Welcome to RailsJournal!
+              </div>
+          </ul>
+        </nav>
+      </div>
+    </div
+  </header>
 
+  <div class="container">
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
 
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
-
-  <%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
 </html>
