@@ -12,7 +12,7 @@
     <% @post.comments.each do |comment| %>
       <li>
         <%= comment.thoughts %> |
-        <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+        <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %> |
         <%= link_to "Delete", post_comment_path(@post, comment),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
