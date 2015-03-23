@@ -10,4 +10,9 @@ describe Comment do
     comment = FactoryGirl.create(:comment, :commenter_name => "snake", :thoughts => "thoughts")
     comment.commenter_name.should eq "SNAKE"
   end
+
+  # it 'is private by default' do
+  #   comment = FactoryGirl.create(:comment)
+  #   comment.public?.should eq false
+  # end
 end
