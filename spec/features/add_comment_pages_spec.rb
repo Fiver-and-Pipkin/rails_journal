@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the add a comment process" do
   it "adds a new comment" do
-    post = Post.create(:title => 'My First Post', :entry => 'This is my first entry')
+    post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Add a comment'
     fill_in 'Commenter name', :with => 'Snake'
@@ -12,7 +12,7 @@ describe "the add a comment process" do
   end
 
   it "gives error when no commenter name is entered" do
-    post = Post.create(:title => 'My First Post', :entry => 'This is my first entry')
+    post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Add a comment'
     fill_in 'Commenter name', :with => ''
@@ -22,7 +22,7 @@ describe "the add a comment process" do
   end
 
   it "gives error when no thoughts are entered" do
-    post = Post.create(:title => 'My First Post', :entry => 'This is my first entry')
+    post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Add a comment'
     fill_in 'Commenter name', :with => 'Snake'

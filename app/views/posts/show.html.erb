@@ -14,7 +14,7 @@
         <li>
           <%= comment.thoughts %> <em>posted by <%= comment.commenter_name %> on <%= comment.updated_at.strftime("%b %d %Y | %l: %M%P") %> </em>|
           <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %> |
-          <%= link_to "Delete", post_comment_path(@post, comment),
+          <%= link_to "Delete Comment", post_comment_path(@post, comment),
                                    :data => {:confirm => "Are you sure?",
                                                   :method => "delete"} %>
         </li>
