@@ -1,7 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
-
   def new
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new
@@ -46,5 +45,4 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:commenter_name, :thoughts, :post_id)
     end
-
 end
