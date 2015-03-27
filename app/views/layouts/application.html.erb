@@ -2,7 +2,6 @@
 <html>
 <head>
   <title><%= yield(:title) %></title>
-  <!-- <title>RailsJournal</title> -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,7 +14,7 @@
           <ul class="list-unstyled">
             <li><span class="site-title"><%= link_to "RailsJournal", '/' %></span></li>
               <li><button class="btn btn-primary"><%= link_to 'Posts', posts_path %></button></li>
-              <li><button class="btn btn-warning"><%= link_to 'Reserved', posts_path %></button></li>
+              <li><button class="btn btn-warning"><%= link_to "RoR docs", "http://www.rubyonrails.org/", data: { confirm: "You are leaving the site. Are you sure?" } %></button></li>
               <span class="center">
                 <strong></strong>
               </span>

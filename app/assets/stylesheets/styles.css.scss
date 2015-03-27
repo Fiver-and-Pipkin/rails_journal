@@ -1,0 +1,86 @@
+body {
+  background-image: url(http://www.rubyinside.com/advent2006/wallpaper1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #F4B600;
+}
+
+h1 {
+    color: lightgrey;
+}
+
+h4 {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.main-nav li {
+  display: inline;
+  margin-right: 1em;
+}
+.nav {
+  margin-top: 10px;
+}
+.nav-right {
+  float: right;
+}
+
+.site-title {
+  font-size: 4em;
+  font-style: italic;
+  font-family: Kameron, serif;
+}
+
+a:link {
+  color: yellow;
+}
+a:visited {
+  color: yellow;
+}
+a:hover{
+  color: blue;
+}
+a:active {
+  color: purple;
+}
+
+
+a.blue:link {color: #0000ff;
+}
+a.blue:active {color: #0000ff;
+}
+a.blue:visited {color: #0000ff;
+}
+a.blue:hover {color: #0000ff;
+}
+
+
+
+.column {
+  float: right;
+  padding: 5px 10px;
+  margin-right: 15px;
+  max-width: 550px;
+  background: white;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px !important;
+  border: 2px solid grey;
+  }
+
+
+.column2 {
+  float: left;
+}
+
+.jumbotron{
+  margin-top:70px !important;
+  background-size: cover;
+  border-radius: 25px !important;
+  font-weight: bold;
+  text-align: left;
+}

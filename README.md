@@ -38,6 +38,9 @@ Install the following gems:
 * 'web-console'
 * 'spring'
 * 'quiet_assets'
+* 'factory_girl_rails'
+* 'devise'
+
 
 Contribute
 ----------
