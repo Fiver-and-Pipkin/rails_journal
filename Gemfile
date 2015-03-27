@@ -9,6 +9,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'factory_girl_rails'
+gem 'devise'
 
 group :development do
   gem 'byebug'
