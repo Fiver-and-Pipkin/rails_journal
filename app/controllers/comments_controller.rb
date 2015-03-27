@@ -26,7 +26,7 @@ class CommentsController < ApplicationController
   def update
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
-    if @comment.update(params[:comment])
+    if @comment.update(comment_params)
       flash[:notice] = "Comment successfully updated!"
       redirect_to posts_path(@comment.post)
     else
@@ -44,7 +44,7 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:commenter_name, :thoughts)
+      params.require(:comment).permit(:commenter_name, :thoughts, :post_id)
     end
 
 end
