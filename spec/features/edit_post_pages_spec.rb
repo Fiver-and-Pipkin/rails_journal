@@ -1,9 +1,12 @@
 require 'rails_helper'
+include Warden::Test::Helpers
+Warden.test_mode!
 
 describe "the edit a blog post process" do
 
   it "edits a post" do
-
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Edit'
@@ -14,6 +17,8 @@ describe "the edit a blog post process" do
   end
 
   it "gives error when no title is entered" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Edit'
@@ -24,6 +29,8 @@ describe "the edit a blog post process" do
   end
 
   it "gives error when no entry is entered" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Edit'
