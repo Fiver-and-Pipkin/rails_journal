@@ -3,7 +3,8 @@
 
 ## by Debbie Cravey
 
-Rails Journal is a blog application built with Ruby on Rails version 4.2.0 and an ActiveRecord database. It allows a user to create, edit, and delete blog posts, and allows for users to make, edit, and delete comments on individual entries.
+Rails Journal is a blog application built with Ruby on Rails version 4.2.0 and an ActiveRecord database. It allows a user to create, edit, and delete blog posts, and allows for users to make, edit, and delete comments on individual entries. Check out a demo at:
+https://salty-ridge-9486.herokuapp.com/
 
 Installation
 ------------
