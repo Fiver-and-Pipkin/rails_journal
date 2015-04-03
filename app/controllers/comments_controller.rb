@@ -10,12 +10,19 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     if @comment.save
-      flash[:notice] = "Comment successfully added!"
-      redirect_to post_path(@comment.post)
+      respond_to do |format|
+        format.html do
+          flash[:success] = "Comment successfully added!"
+          redirect_to post_path(@comment.post)
+        end
+        format.js
+      end
     else
+      flash[:danger] = "There was a problem creating your comment, please try again."
       render :new
     end
   end
+
 
   def edit
     @post = Post.find(params[:post_id])
@@ -26,6 +33,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
+
       flash[:notice] = "Comment successfully updated!"
       redirect_to posts_path(@comment.post)
     else

@@ -9,9 +9,9 @@
 
 <div class="column">
   <% if @post.comments.any? %>
-    <h4>Here are the comments for this post:</h4>
 
-    <ul>
+    <ul id="comment_list">
+    <h4>Here are the comments for this post:</h4>
       <% @post.comments.each do |comment| %>
         <li>
           <p><%= comment.thoughts %> <em>posted by <%= comment.commenter_name %> on <%= comment.updated_at.strftime("%b %d %Y | %l: %M%P") %> </em>|
@@ -25,7 +25,7 @@
   <% else %>
     <p>There are no comments yet!</p>
   <% end %>
-  <p><%= link_to "Add a comment", new_post_comment_path(@post), :class => "blue" %></p>
+  <p><%= link_to "Add a comment", new_post_comment_path(@post), id: "new_link", :class => "blue", remote: true %></p>
 </div>
 
 <div class="column2"
