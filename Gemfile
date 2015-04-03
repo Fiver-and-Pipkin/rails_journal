@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'jquery-turbolinks'
 gem 'factory_girl_rails'
 gem 'devise'
+gem 'rest-client'
+
 
 group :development do
   gem 'byebug'
@@ -23,12 +25,19 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'pry'
+  gem 'poltergeist'
+  gem 'database_cleaner', '~> 1.4.1'
+  gem 'dotenv-rails'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
+  # gem 'webmock'
+  gem 'vcr'
+
+
 end
 
 group :production do

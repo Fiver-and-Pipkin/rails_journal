@@ -1,6 +1,8 @@
 
 RSpec.configure do |config|
 
+  require 'capybara/poltergeist'
+  Capybara.javascript_driver = :poltergeist
 
   config.expect_with :rspec do |expectations|
 
@@ -14,7 +16,7 @@ RSpec.configure do |config|
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
-    
+
   end
 
 

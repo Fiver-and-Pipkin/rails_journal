@@ -2,7 +2,7 @@ require 'rails_helper'
 include Warden::Test::Helpers
 Warden.test_mode!
 
-describe "the add a comment process" do
+describe "the add a comment process", js: true do
   it "adds a new comment" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
@@ -12,10 +12,10 @@ describe "the add a comment process" do
     fill_in 'Commenter name', :with => 'Snake'
     fill_in 'Thoughts', :with => 'FIRRRST!'
     click_on 'Create Comment'
-    expect(page).to have_content 'successfully'
+    expect(page).to have_content 'posted by SNAKE'
   end
 
-  it "gives error when no commenter name is entered" do
+  it "gives error when no commenter name is entered", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     post = FactoryGirl.create(:post)
@@ -27,7 +27,7 @@ describe "the add a comment process" do
     expect(page).to have_content 'errors'
   end
 
-  it "gives error when no thoughts are entered" do
+  it "gives error when no thoughts are entered", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     post = FactoryGirl.create(:post)
