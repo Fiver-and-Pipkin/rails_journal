@@ -18,7 +18,7 @@ class Comment < ActiveRecord::Base
       :url => "https://api.twilio.com/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json",
       :user => ENV['TWILIO_ACCOUNT_SID'],
       :password => ENV['TWILIO_AUTH_TOKEN'],
-      :payload => { :Body => 'Thanks for Using RailsJournal! You are adorable.',
+      :payload => { :Body => 'Come along, Pond.',
                     :To => '5037409609',
                     :From => '5033369801' }
     ).execute
