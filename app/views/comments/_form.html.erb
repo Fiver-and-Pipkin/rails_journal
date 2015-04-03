@@ -1,12 +1,12 @@
 <%= render('layouts/errors', :object => @comment) %>
 
-  <div class="new_comment">
-<h4><%= form_for [@post, @comment], remote: true do |f| %>
-  <p><%= f.label :commenter_name %>
-  <%= f.text_field :commenter_name %></p>
+<div class="new_comment">
+  <h4><%= form_for [@post, @comment], remote: true do |f| %>
+    <p><%= f.label :commenter_name %>
+    <%= f.text_field :commenter_name %></p>
 
-  <%= f.label :thoughts %>
-  <%= f.text_area :thoughts %>
-  <p><%= f.submit %></p>
-<% end %></h4>
+    <%= f.label :thoughts %>
+    <%= f.text_area :thoughts %>
+    <p><%= f.submit %></p>
+  <% end %></h4>
 </div>
